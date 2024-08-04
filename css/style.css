@@ -1,0 +1,230 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+p {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+}
+span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+
+}
+li {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/* Website header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04AA6D;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+/* Main content */
+.main {
+    border: 1px solid #263343;
+    width:60%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 5% 2% 5%;
+    border-radius: 10px;
+}
+
+.main label {
+    display: block;
+    flex-direction: column;
+    padding-top: 2%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.result_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    border: 1px solid #333;
+    margin: 20px;
+}
+
+.total_profit {
+    text-align: center;
+}
+
+.total_title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.total_earning {
+    font-size: 1.5em;
+}
+
+.green {
+    color: #04AA6D;
+}
+
+.white {
+    color: #04AA6D;
+}
+table { 
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #555;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 10px;
+}
+thead {
+    background-color: #fff;
+}
+article {
+    padding-left: 5%;
+    padding-top: 5%;
+}
+.nav_table_content {
+    /* padding-left: 5%; */
+    text-align: center;
+}
+
+.nav_table_content ul {
+    
+    padding-left: 0; /* Removes default padding */
+
+}
+.nav_table_content ul li {
+    display: inline-block;
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+    
+}
+
+.footer {
+    text-align: center;
+}
+/* Laptop & tablet width (1024px ~ 1279px)*/ 
+@media all and (min-width:1024px) and (max-width:1279px) { 
+  } 
+  
+  /* Tablet width (768px ~ 1023px)*/ 
+  @media all and (min-width:768px) and (max-width:1023px) { 
+    
+  } 
+  
+  /* Mobile width & tablet height (480px ~ 767px)*/ 
+  @media all and (min-width:480px) and (max-width:767px) {
+    .result_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  } 
+  
+  /* Mobile height ( ~ 479px)*/ 
+  @media all and (max-width:479px) {
+    .result_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* To vertically align a divs */
+    }
+  }

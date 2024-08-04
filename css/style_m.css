@@ -1,0 +1,113 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+p {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+}
+span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+
+}
+li {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/* Website header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04AA6D;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+
+
+.footer {
+    text-align: center;
+}
+/* Laptop & tablet width (1024px ~ 1279px)*/ 
+@media all and (min-width:1024px) and (max-width:1279px) { 
+  } 
+  
+  /* Tablet width (768px ~ 1023px)*/ 
+  @media all and (min-width:768px) and (max-width:1023px) { 
+    
+  } 
+  
+  /* Mobile width & tablet height (480px ~ 767px)*/ 
+  @media all and (min-width:480px) and (max-width:767px) {
+    .result_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  } 
+  
+  /* Mobile height ( ~ 479px)*/ 
+  @media all and (max-width:479px) {
+    .result_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* To vertically align a divs */
+    }
+  }
