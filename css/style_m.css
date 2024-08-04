@@ -78,6 +78,116 @@ li {
     padding: 8px 12px;
 }
 
+/* Main content */
+.main {
+    border: 1px solid #263343;
+    width:60%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 5% 2% 5%;
+    border-radius: 10px;
+}
+
+.main label {
+    display: block;
+    flex-direction: column;
+    padding-top: 2%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.main_breakdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.breakdown_container {
+    text-align: center;
+    border: 1px solid black; /* Optional, to visualize the container */
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.breakdown_list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.breakdown_list td {
+    padding: 10px;
+    vertical-align: middle;
+}
+.breakdown_list .icon-cell {
+    width: 1%;
+    white-space: nowrap;
+}
+.breakdown_list .text-cell {
+    text-align: left;
+    width: 70%;
+}
+.breakdown_list .value-cell {
+    text-align: right;
+    width: 29%;
+    white-space: nowrap;
+}
+.circle, .dot2, .dot3 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.circle {
+    background-color: green;
+}
+.dot2 {
+    background-color: blue;
+}
+.dot3 {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
 
 
 .footer {

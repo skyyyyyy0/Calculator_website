@@ -29,7 +29,51 @@
             <li><i class="fa-solid fa-globe"></i></li>
         </ul>
     </nav>
-    
+    <div class="main">
+        <div class="main_title">Mortgage Calculator</div>
+        <form action="">
+            <label for="Home">Home Price ($)</label>
+            <input type="number" data-type="num" inputmode="decimal" id="Initial" value="500000" placeholder="$">
+            <label for="Down">Down Payment</label>
+            <input type="number" data-type="num" inputmode="decimal" id="time" value="100000" placeholder="0">
+            <label for="rate">Mortgage Interest Rate (%)</label>
+            <input type="number" data-type="num" inputmode="decimal" id="rate" value="6" placeholder="%">
+            <button id="cal" type="button">Calculate</button>
+            <label for="tax">Annual Property tax (%)</label>
+            <input type="number" data-type="num" inputmode="decimal" id="rate" value="2.44" placeholder="%">
+            <label for="insurance">Annual Homeowners insurance ($)</label>
+            <input type="number" data-type="num" inputmode="decimal" id="rate" value="1250" placeholder="$">
+            <label for="hoa">Monthly HOA/Condo Fees ($)</label>
+            <input id="result" type="text" data-type="num" inputmode="decimal" value="0" placeholder="$" readonly>
+        </form>
+        <div class="main_breakdown">
+            <div class="breakdown_container">
+                <h2>Total Monthly Payment Breakdown</h2>
+                <p>Based on a $500,000 mortgage</p>
+                <div class="breakdown_details">
+                    <table class="breakdown_list">
+                        <tbody>
+                            <tr class="mortgage_payment">
+                                <td class="icon-cell"><span class="circle"></span></td>
+                                <td class="text-cell">Mortgage Payment</td>
+                                <td class="value-cell">$2,398</td>
+                            </tr>
+                            <tr class="mortgage_payment">
+                                <td class="icon-cell"><span class="dot2"></span></td>
+                                <td class="text-cell">Home Insurance</td>
+                                <td class="value-cell">$104</td>
+                            </tr>
+                            <tr class="mortgage_payment">
+                                <td class="icon-cell"><span class="dot3"></span></td>
+                                <td class="text-cell">Taxes & Other Fees</td>
+                                <td class="value-cell">$2,267</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <p><a href="mailto:haneul11072@gmail.com">&#128233; contact@gmail.com</a></p>
         <p><a href="mailto:haneul110721@gmail.com">&#128483; Send Feedback</a></p>
