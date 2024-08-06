@@ -6,7 +6,7 @@
     <title>Compound Interest Calculator</title>
     <script src="https://kit.fontawesome.com/b9b3f2abe6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_l.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -30,42 +30,54 @@
         </ul>
     </nav>
     <div class="main">
-        <div class="main_title">Compound Interest Calculator</div>
+        <div class="main_title">Loan Calculator</div>
         <form action="">
-            <label for="Initial">Initial Value ($)</label>
+            <label for="Initial">Total Loan Amount ($)</label>
             <input type="number" data-type="num" inputmode="decimal" id="Initial" value="100000" placeholder="$">
-            <label for="time">Number of Times (Period)</label>
+            <label for="time">Loan Term (Month)</label>
             <input type="number" data-type="num" inputmode="decimal" id="time" value="0" placeholder="0">
-            <label for="rate">Rate of return (%)</label>
+            <label for="rate">Interest Rate (%)</label>
             <input type="number" data-type="num" inputmode="decimal" id="rate" value="5" placeholder="%">
+            <label for="down">Down Payment ($)</label>
+            <input type="number" data-type="num" inputmode="decimal" id="down" value="5" placeholder="%">
             <button id="cal" type="button">Calculate</button>
-            <label for="result">Result ($)</label>
-            <input id="result" type="text" data-type="num" inputmode="decimal" value="100,000" placeholder="$" readonly>
+            <label for="result">Monthly Pay : ($)</label>
+            <input id="result" type="text" data-type="num" inputmode="decimal" value="5,000" placeholder="$" readonly>
         </form>
         <div class="result_container">
-            <div class="total_profit">
-                <div class="total_title">Total Profit</div>
-                <div id="total_profit" class="total_earning green">$0</div>
+            <div class="result_title">
+                Total Cost Details
             </div>
-            <div class="total_profit">
-                <div class="total_title">Resulting Amount</div>
-                <div id="resulting_amount" class="total_earning white">$0</div>
-            </div>
-        </div>
-        <div class="table_container">
             <table id="table_results">
-                <thead class="table_content">
-                    <tr>
-                        <th class="table_highlight">#</th>
-                        <th class="th">Profit ($)</th>
-                        <th class="th">Total ($)</th>
-                        <th class="th">Yield</th>
-                    </tr>
-                </thead>
                 <tbody>
+                    <tr>
+                        <td align="left">Total Loan Amount</td>
+                        <td align="right">$40,000</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Sale Tax</td>
+                        <td align="right">$4,440</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Upfront Payment</td>
+                        <td align="right">$16,640</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Total of 60 Loan Payments</td>
+                        <td align="right">$45,290</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Total Loan Interest</td>
+                        <td align="right">$5,290</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Total Cost (price, interest, tax, fees) </td>
+                        <td align="right">$61,290</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+        
         <article>
             <nav class="nav_table_content">
                 <h2>Table of Contents</h2>

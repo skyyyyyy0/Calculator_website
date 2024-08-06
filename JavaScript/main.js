@@ -38,4 +38,4 @@ btn.addEventListener('click', function() {
     resultingAmountDiv.innerText = `${total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
     // const A = P * Math.pow((1 + r / n), n * t);
     result.value = isNaN(total) ? 'Invalid input' : total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-});
+}); // replace = comma every 3 digits

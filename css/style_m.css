@@ -1,17 +1,21 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans 3';
+    font-family: "PT Sans", sans-serif;
 }
 
 a {
     text-decoration: none;
     color: black;
+    
 }
+body {
+    font-family: "PT Sans", sans-serif;
+}
+
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -34,6 +38,21 @@ li {
     font-size: 1.2em;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+#loan_type {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left:auto ;
+    margin-right: auto;
+
+}
+#loan_type th, #loan_type td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+#loan_type th {
+    background-color: #f2f2f2;
 }
 /* Website header */
 .navbar {
@@ -90,6 +109,12 @@ li {
     border-radius: 10px;
 }
 
+.main_title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
 .main label {
     display: block;
     flex-direction: column;
@@ -132,6 +157,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin: 20px;
+    flex-direction: column;
 }
 .breakdown_container {
     text-align: center;
@@ -163,6 +189,8 @@ button:hover {
     width: 29%;
     white-space: nowrap;
 }
+
+
 .circle, .dot2, .dot3 {
     width: 12px;
     height: 12px;
@@ -180,10 +208,69 @@ button:hover {
     background-color: red;
 }
 
+.total_result {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    border-top: 1px solid #263343;
+    padding-top: 2%;
+}
 
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    
+}
 
+.box {
+    width: 20%;
+    height: 20px;
+    border: 1px 1px 2px 1px
+    
+}
+  
+.non-click {
+    background-color: white;
+}
+  
+.click {
+    background-color: #04AA6D;
+} */
+/* .chart-title {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+} */
 
+.main_chart {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+}
 
+.chart_legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+.legend_item {
+    display: flex;
+    width: auto;
+    height: 5%;
+    margin-right: 10px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.legend_color {
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
 
 
 

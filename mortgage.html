@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/style_m.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Website header -->
+
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="fa-solid fa-calculator"></i>
@@ -21,7 +21,7 @@
         <ul class="navbar_menu">
             <li><a href="index.html">Compound</a></li>
             <li><a href="mortgage.html">Mortgage</a></li>
-            <li><a href="">Calculator</a></li>
+            <li><a href="loan.html">Loan</a></li>
             <li><a href="">Contact us</a></li>
         </ul>
         <ul class="navbar_icons">
@@ -33,18 +33,29 @@
         <div class="main_title">Mortgage Calculator</div>
         <form action="">
             <label for="Home">Home Price ($)</label>
-            <input type="number" data-type="num" inputmode="decimal" id="Initial" value="500000" placeholder="$">
+            <input type="number" data-type="num" inputmode="decimal" id="home" value="500000" placeholder="$">
             <label for="Down">Down Payment</label>
-            <input type="number" data-type="num" inputmode="decimal" id="time" value="100000" placeholder="0">
+            <input type="number" data-type="num" inputmode="decimal" id="down" value="100000" placeholder="0">
             <label for="rate">Mortgage Interest Rate (%)</label>
             <input type="number" data-type="num" inputmode="decimal" id="rate" value="6" placeholder="%">
+            <label for="rate">Loan Type </label>
+            <input list="time-options" inputmode="decimal" id="time" value="30" placeholder="years">
+            <!-- <select id="loan-type">
+                <option value="30-year-fixed">30-Year Fixed</option>
+                <option value="15-year-fixed">15-Year Fixed</option>
+            </select> -->
+            <datalist id="time-options">
+                <option value="30">30-Year Fixed</option>
+                <option value="15">15</option>
+                <option value="10">10</option>
+            </datalist>
             <button id="cal" type="button">Calculate</button>
             <label for="tax">Annual Property tax (%)</label>
-            <input type="number" data-type="num" inputmode="decimal" id="rate" value="2.44" placeholder="%">
+            <input type="number" data-type="num" inputmode="decimal" id="annual" value="2.44" placeholder="%">
             <label for="insurance">Annual Homeowners insurance ($)</label>
-            <input type="number" data-type="num" inputmode="decimal" id="rate" value="1250" placeholder="$">
+            <input type="number" data-type="num" inputmode="decimal" id="insurance" value="1250" placeholder="$">
             <label for="hoa">Monthly HOA/Condo Fees ($)</label>
-            <input id="result" type="text" data-type="num" inputmode="decimal" value="0" placeholder="$" readonly>
+            <input type="text" data-type="num" inputmode="decimal" id="hoa" value="1000" placeholder="$">
         </form>
         <div class="main_breakdown">
             <div class="breakdown_container">
@@ -56,29 +67,115 @@
                             <tr class="mortgage_payment">
                                 <td class="icon-cell"><span class="circle"></span></td>
                                 <td class="text-cell">Mortgage Payment</td>
-                                <td class="value-cell">$2,398</td>
+                                <td id="mortgage_result" class="value-cell"></td>
                             </tr>
                             <tr class="mortgage_payment">
                                 <td class="icon-cell"><span class="dot2"></span></td>
                                 <td class="text-cell">Home Insurance</td>
-                                <td class="value-cell">$104</td>
+                                <td id="home_insurance" class="value-cell"></td>
                             </tr>
                             <tr class="mortgage_payment">
                                 <td class="icon-cell"><span class="dot3"></span></td>
                                 <td class="text-cell">Taxes & Other Fees</td>
-                                <td class="value-cell">$2,267</td>
+                                <td id="tax_result" class="value-cell"></td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="total_result">
+                        Total Monthly Payment
+                        <span id="total_result" class="total_value"></span>
+                    </div>
+                </div>
+                <!-- <div class="container">
+                    <div class="box non-click" id="first">Overview</div>
+                    <div class="box non-click" id="second">Details</div>
+                </div> -->
+            </div>
+            <div class="main_chart">
+                <canvas id="myChart"></canvas>
+                <div class="chart_legend">
+                    <div class="legend_item">
+                        Tax & Other Fees: 
+                        <span id="legend_color1"></span>
+                    </div>
+                    <div class="legend_item">
+                        Home Insurance:
+                        <span id="legend_color2"></span>
+                    </div>
+                    <div class="legend_item">
+                        Mortgage Payment: 
+                        <span id="legend_color3"></span>
+                    </div>
                 </div>
             </div>
         </div>
+        <article>
+            <section class="loan_type">
+                <h2>Compare Loan Types</h2>
+                <p>A 30-year fixed-rate mortgage and a 15-year fixed-rate mortgage are two common types of home loans, each with distinct features. A 30-year fixed mortgage has a constant interest rate for the entire 30-year term, resulting in lower monthly payments compared to a 15-year fixed mortgage, but it typically comes with a higher interest rate and greater total interest paid over the life of the loan.</p>
+                <p>This type of loan is ideal for borrowers seeking lower monthly payments and planning to stay in their home for a long time. In contrast, a 15-year fixed mortgage also has a constant interest rate but for a shorter term of 15 years. It usually offers a lower interest rate, leading to higher monthly payments but significantly less total interest paid. This option is suitable for those who can afford the higher payments and wish to pay off their mortgage faster, thereby building home equity more quickly. The choice between these two depends on the borrower’s financial situation, long-term goals, and monthly budget.</p>
+                <table id="loan_type">
+                    <thead>
+                        <tr>
+                            <th>Loan Term</th>
+                            <th>30 Year Fixed</th>
+                            <th>15 Year Fixed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Payment</td>
+                            <td><span>$1900</span></td>
+                            <td><span>$3300</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mortgage Rate</td>
+                            <td><span>4.25%</span></td>
+                            <td><span>6.00%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Interest Paid</td>
+                            <td><span>$307,858</span></td>
+                            <td><span>$206,291</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="how_to_calculate">
+                <h2>How Your Mortgage Payment Is Calculated</h2>
+                <p>Your mortgage payment is calculated using the loan amortization formula, which considers the loan amount (principal), the interest rate, and the loan term. The formula ensures that your mortgage is paid off in equal monthly payments over the term of the loan, including both interest and principal repayment. Here’s a breakdown of how it works:</p>
+                <h2>Mortgage Payment Formula</h3>
+                <p>For those who want to know the math that goes into calculating a mortgage payment, we use the following formula to determine a monthly estimate:</p>
+                <img src="images/M_formula.png" alt="">
+                <div>
+                    <ul class="noDot">
+                        <li><span class="bold">M</span> = monthly mortgage payment</li>
+                        <li><span class="bold">P</span> = loan principal</li>
+                        <li><span class="bold">r</span> = monthly interest rate (annual interest rate divided by 12)</li>
+                        <li><span class="bold">n</span> = total number of monthly payments (loan term in years multiplied by 12)</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="downPayment">
+                <h2>Down Payment</h2>
+                <p>A house down payment is the initial amount of money a buyer pays upfront when purchasing a home, typically expressed as a percentage of the home’s purchase price. This payment reduces the mortgage amount needed to finance the rest of the purchase. Larger down payments can lead to lower monthly mortgage payments, reduced interest over the life of the loan, and potentially avoiding private mortgage insurance (PMI), which is required if the down payment is less than 20%. Common down payment requirements vary by loan type, with conventional loans usually needing 5-20%, FHA loans requiring at least 3.5%, and VA and USDA loans often requiring no down payment. Planning and saving for a down payment is a crucial step in the home-buying process.</p>
+            </section>
+            <section class="homeInsurance">
+                <h2>Homeowners Insurance</h2>
+                <p>Home insurance, also known as homeowners insurance, is a type of property insurance that provides financial protection against damage or loss to an individual’s home and belongings. It typically covers various risks, including fire, theft, vandalism, and certain natural disasters. Home insurance also offers liability coverage, which protects homeowners if someone is injured on their property. Additionally, it may cover additional living expenses if the home becomes uninhabitable due to a covered event. Mortgage lenders usually require home insurance to protect their investment in the property. Overall, home insurance provides peace of mind by safeguarding one of the most significant investments a person can make.</p>
+            </section>
+            <section class="propertyTax">
+                <h2>Property Taxes</h2>
+                <p>Property tax is a local tax imposed on real estate, calculated based on the assessed value of the property, including land and buildings. The tax rate is determined by local government authorities and is used to fund public services such as schools, police and fire departments, road maintenance, and other community infrastructure. Property owners are typically required to pay this tax annually or semi-annually, and the amount can vary significantly depending on the property’s location and value. Failure to pay property taxes can result in penalties, interest, and potentially foreclosure on the property.</p>
+            </section>
+        </article>
     </div>
     <footer class="footer">
         <p><a href="mailto:haneul11072@gmail.com">&#128233; contact@gmail.com</a></p>
         <p><a href="mailto:haneul110721@gmail.com">&#128483; Send Feedback</a></p>
         @ 2024 Calculator Company. All rights reserved
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JavaScript/mortgage.js"></script>
 </body>
 </html>
