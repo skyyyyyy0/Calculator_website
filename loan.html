@@ -35,11 +35,9 @@
             <label for="Initial">Total Loan Amount ($)</label>
             <input type="number" data-type="num" inputmode="decimal" id="Initial" value="100000" placeholder="$">
             <label for="time">Loan Term (Month)</label>
-            <input type="number" data-type="num" inputmode="decimal" id="time" value="0" placeholder="0">
+            <input type="number" data-type="num" inputmode="decimal" id="time" value="60" placeholder="0">
             <label for="rate">Interest Rate (%)</label>
             <input type="number" data-type="num" inputmode="decimal" id="rate" value="5" placeholder="%">
-            <label for="down">Down Payment ($)</label>
-            <input type="number" data-type="num" inputmode="decimal" id="down" value="5" placeholder="%">
             <button id="cal" type="button">Calculate</button>
             <label for="result">Monthly Pay : ($)</label>
             <input id="result" type="text" data-type="num" inputmode="decimal" value="5,000" placeholder="$" readonly>
@@ -51,87 +49,50 @@
             <table id="table_results">
                 <tbody>
                     <tr>
-                        <td align="left">Total Loan Amount</td>
-                        <td align="right">$40,000</td>
+                        <td align="left">Monthly Loan Payment</td>
+                        <td id="result-td" align="right">$</td>
                     </tr>
                     <tr>
-                        <td align="left">Sale Tax</td>
-                        <td align="right">$4,440</td>
+                        <td align="left">Number of Payments</td>
+                        <td id="number-td" align="right"></td>
                     </tr>
                     <tr>
-                        <td align="left">Upfront Payment</td>
-                        <td align="right">$16,640</td>
+                        <td align="left">Cumulative Payments</td>
+                        <td id="cumulative-td" align="right"></td>
                     </tr>
                     <tr>
-                        <td align="left">Total of 60 Loan Payments</td>
-                        <td align="right">$45,290</td>
-                    </tr>
-                    <tr>
-                        <td align="left">Total Loan Interest</td>
-                        <td align="right">$5,290</td>
-                    </tr>
-                    <tr>
-                        <td align="left">Total Cost (price, interest, tax, fees) </td>
-                        <td align="right">$61,290</td>
+                        <td align="left">Total Interest Paid</td>
+                        <td id="total-td" align="right"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
         <article>
-            <nav class="nav_table_content">
-                <h2>Table of Contents</h2>
-                    <li><a href="#section1">How to use</a></li>
-                    <li><a href="#section2">What is compound interest?</a></li>
-                    <li><a href="#section3">Compound interest formula</a></li>
-                    <li><a href="#section4">Rule of 4%</a></li>
-                    <li><a href="#section5">Where to use</a></li>
-            </nav>
-            <section id="section1" class="how_to">
-                <h2>How to use</h2>
-                    <p>The Compound Interest Calculator helps you determine the future value of an investment based on the initial principal, the number of periods, and the rate of return. Follow the steps below to use the calculator:</p>
-                    <ul class="how_to_order">
-                        <li><span class="bold">Initial Value ($)</span> : Enter the initial amount of money you are investing. For example, if you are starting with $100,000, input 100000 in this field.</li>
-                        <li><span class="bold">Number of Times (Period)</span> : Enter the number of periods for which the investment will grow. For instance, if you plan to invest for 5 years, input 5 in this field.</li>
-                        <li><span class="bold">Rate of Return (%)</span> : Input the annual rate of return as a percentage. For example, if you expect a 5% return per year, input 5 in this field.</li>
-                        <li><span class="bold">Calculate</span> : Click the green Calculate button to compute the compound interest. The calculator will process the inputs and display the results.</li>
-                        <li><span class="bold">Result ($)</span> : The Result field will show the final amount of your investment after the specified number of periods and the given rate of return. This value is automatically updated when you click Calculate.</li>
-                    </ul>
+            <section id="section1" class="Mortgage">
+                <h2>Calculators for loan types</h2>
+                    <p>Here are some details about the most common types of loans and the loan calculators that can help you in the process.</p>
+                    <h4>Mortgage</h4>
+                    <p>A mortgage loan is a type of loan used to purchase real estate, where the property serves as collateral. It involves borrowing a principal amount that accrues interest over a specified term, typically 15 to 30 years. Borrowers make an initial down payment and then repay the loan through monthly installments. Common types of mortgage loans include fixed-rate mortgages, where the interest rate remains constant, and adjustable-rate mortgages, where the interest rate can change. Specialized loans such as FHA loans, designed for low-to-moderate-income borrowers, VA loans for military veterans, and jumbo loans for amounts exceeding conforming limits, offer various benefits and requirements.</p>
             </section>
-            <section id="section2" class="what_is">
-                <h2>What is compound interest?</h2>
-                <p>Compound interest is the interest on a loan or deposit that is calculated based on both the initial principal and the accumulated interest from previous periods. Essentially, it means earning “interest on interest,” which can significantly increase the amount of interest earned or paid over time. This is a fundamental concept in finance and investing.</p>
-                <p>Compound interest is a powerful tool in finance, helping investors grow their wealth over time and affecting how much borrowers pay on loans. Understanding how it works is essential for making informed financial decisions.</p>
+            <section id="section2" class="Auto Loan">
+                <h2>Auto Loan</h2>
+                <p>An auto loan is a type of financing provided by banks, credit unions, or car dealerships to help individuals purchase a vehicle. The loan amount covers the cost of the car, minus any down payment made by the borrower. The borrower then repays the loan in monthly installments over a fixed term, usually ranging from 36 to 72 months, with interest applied. The vehicle itself serves as collateral, meaning if the borrower defaults on the loan, the lender can repossess the car. Auto loans can have fixed or variable interest rates, and the terms and rates are influenced by factors such as the borrower’s credit score, income, and the loan amount.</p>
             </section>
-            <section id="section3" class="formula">
-                <h2>Compound interest formula</h2>
-                <p>The compound interest formula is used to calculate the amount of interest earned on an investment or paid on a loan when interest is compounded over multiple periods. The formula considers the initial principal, the interest rate, the number of times interest is compounded per period, and the total number of periods.</p>
-                <img src="images/formula.png" alt="">
+            <section id="section3" class="Student Loan">
+                <h2>Student Loan</h2>
+                <p>A student loan is a type of financial aid designed to help students cover the cost of higher education, including tuition, books, and living expenses. These loans can be provided by the federal government or private lenders. Federal student loans often have lower interest rates and more flexible repayment options compared to private loans, and they may include benefits like income-driven repayment plans and loan forgiveness programs. Repayment typically begins after a grace period following graduation or when the student drops below half-time enrollment. Interest on student loans can be fixed or variable, and the eligibility and terms depend on factors such as the borrower’s financial need, credit history, and the type of loan.</p>
+            </section>
+            <section id="section4" class="Calculate">
+                <h2>How to calculate</h2>
+                <p>Calculating a loan typically involves understanding the principal amount, interest rate, and loan term. Here’s a basic overview of how to calculate the monthly payment for a loan using the loan amortization formula:
+                </p>
+                <img src="images/Loan Formula.png" alt="">
                 <div>
                     <ul class="noDot">
-                        <li><span class="bold">A</span> = the future value of the investment/loan, including interest</li>
                         <li><span class="bold">P</span> = the principal investment/loan amount (the initial amount of money)</li>
                         <li><span class="bold">r</span> = the annual interest rate (in decimal form, so 5% becomes 0.05)</li>
                         <li><span class="bold">n</span> = the number of times interest is compounded per year</li>
-                        <li><span class="bold">t</span> = the number of years the money is invested or borrowed for</li>
-                    </ul>
-                </div>
-                <p>Understanding the compound interest formula is crucial for making informed decisions about investments, savings, and loans, as it highlights how different variables affect the future value of money.</p>
-            </section>
-            <section id="section4" class="rule">
-                <h2>What is rule of 4%?</h2>
-                <p>The 4% rule is a guideline used in retirement planning to estimate a sustainable withdrawal rate from a retirement portfolio. It suggests that retirees can withdraw 4% of their retirement savings in the first year of retirement and adjust that amount for inflation each subsequent year without running out of money over a 30-year retirement period.</p>
-            </section>
-            <section id="section5" class="where">
-                <h2>Where to use</h2>
-                <p>The Compound Interest Calculator is a versatile financial tool that can be used in various scenarios to help you understand and maximize the growth of your investments, savings, and more. Here are some common use cases:</p>
-                <div>
-                    <ul class="noDot">
-                        <li><span class="bold">Investment Planning:<br></span>•	Use the calculator to estimate the future value of your investments. By inputting your initial investment amount, expected rate of return, and the investment period, you can see how much your investment will grow over time.</li>
-                        <li><span class="bold">Retirement Savings:<br></span>•	Plan for your retirement by calculating how much your current savings will be worth when you retire. This can help you determine if you are on track to meet your retirement goals or if you need to adjust your savings strategy.</li>
-                        <li><span class="bold">Loan Comparison:<br></span>•	Use the calculator to compare different loan offers. By understanding how the interest on different loans compounds, you can make informed decisions about which loan offers the best terms and lowest overall cost.</li>
-                        <li><span class="bold">Interest Rate Analysis:<br></span>•	Analyze how different interest rates affect the growth of your savings or investments. This can help you choose the best savings account, certificate of deposit (CD), or investment opportunity.</li>
-                        <li><span class="bold">Business Applications:<br></span>•	Businesses can use the calculator to project future earnings on reserve funds or investments, helping with financial planning and cash flow management.</li>
                     </ul>
                 </div>
             </section>
@@ -140,8 +101,8 @@
     <footer class="footer">
         <p><a href="mailto:haneul11072@gmail.com">&#128233; contact@gmail.com</a></p>
         <p><a href="mailto:haneul110721@gmail.com">&#128483; Send Feedback</a></p>
-        @ 2024 Calculator Company. All rights reserved.
+        @ 2024 Financial Calculator Company. All rights reserved.
     </footer>
-    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/loan.js"></script>
 </body>
 </html>
