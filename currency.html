@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Financial Calculator - We offer a variety of financial calculation services.</title>
+    <meta name="title" content="Financial Calculator - We offer a variety of financial calculation services." />
+    <meta name="description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://financial-calc.com/index.html" />
+    <meta property="og:title" content="Financial Calculator - We offer a variety of financial calculation services." />
+    <meta property="og:description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+    <meta property="og:image" content="https://s3.us-east-2.amazonaws.com/financial-calc.com/financial_calculator_interface.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://financial-calc.com/index.html" />
+    <meta property="twitter:title"
+        content="Financial Calculator - We offer a variety of financial calculation services." />
+    <meta property="twitter:description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+    <meta property="twitter:image" content="https://s3.us-east-2.amazonaws.com/financial-calc.com/financial_calculator_interface.png" />
+
+    <script src="https://kit.fontawesome.com/b9b3f2abe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/style_c.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <!-- Website header -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-calculator"></i>
+            <a href="">FiCalc</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="index.html">Compound</a></li>
+            <li><a href="mortgage.html">Mortgage</a></li>
+            <li><a href="loan.html">Loan</a></li>
+            <li><a href="currency.html">Currency</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <li id="lightMode"><i class="fa-solid fa-sun"></i></li>
+            <li id="darkMode"><i class="fa-solid fa-moon"></i></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="wrapper">
+            <div class="app-details">
+                <!-- <img src="images/app-icon.png" alt="" class="app-icon"> -->
+                <h1 class="app-title">Currency Converter</h1>
+            </div>
+            <label for="amount">Amount : </label>
+            <input type="number" id="amount" value="100">
+            <div class="dropdowns">
+                <select name="" id="from-currency-select"></select>
+                <select name="" id="to-currency-select"></select>
+            </div>
+            <button id="convert-button">Convert</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p><a href="mailto:haneul11072@gmail.com" class="footer-content">&#128233; contact@gmail.com</a></p>
+        <p><a href="mailto:haneul110721@gmail.com" class="footer-content">&#128483; Send Feedback</a></p>
+        <p class="footer-content">@ 2024 Financial Calculator Company. All rights reserved.</p>
+    </footer>
+    <script src="JavaScript/api-key.js"></script>
+    <script src="JavaScript/currency-codes.js"></script>
+    <script src="JavaScript/currency.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4578269349652811"
+     crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanical Calculator</title>
+    <!-- Primary Meta Tags -->
+    <title>Financal Calculator = We offer a variety of financial calculation services.</title>
+    <meta name="title" content="Financal Calculator = We offer a variety of financial calculation services." />
+    <meta name="description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://finanical-calc.com/index.html" />
+    <meta property="og:title" content="Financal Calculator = We offer a variety of financial calculation services." />
+    <meta property="og:description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+    <meta property="og:image" content="https://s3.us-east-2.amazonaws.com/finanical-calc.com/financial_calculator_interface.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://finanical-calc.com/index.html" />
+    <meta property="twitter:title"
+        content="Financal Calculator = We offer a variety of financial calculation services." />
+    <meta property="twitter:description"
+        content="We offer a variety of financial calculation services, including a compound interest calculator, mortgage calculator, and loan calculator" />
+    <meta property="twitter:image" content="https://s3.us-east-2.amazonaws.com/finanical-calc.com/financial_calculator_interface.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
     <script src="https://kit.fontawesome.com/b9b3f2abe6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
+
+<body class="light-mode">
     <!-- Website header -->
     <nav class="navbar">
         <div class="navbar_logo">
@@ -22,11 +49,11 @@
             <li><a href="index.html">Compound</a></li>
             <li><a href="mortgage.html">Mortgage</a></li>
             <li><a href="loan.html">Loan</a></li>
-            <li><a href="">Contact us</a></li>
+            <li><a href="currency.html">Currency</a></li>
         </ul>
         <ul class="navbar_icons">
-            <li><i class="fa-solid fa-sun"></i></li>
-            <li><i class="fa-solid fa-globe"></i></li>
+            <li id="lightMode"><i class="fa-solid fa-sun"></i></li>
+            <li id="darkMode"><i class="fa-solid fa-moon"></i></li>
         </ul>
     </nav>
     <div class="main">
@@ -47,7 +74,7 @@
                 <div class="total_title">Total Profit</div>
                 <div id="total_profit" class="total_earning green">$0</div>
             </div>
-            <div class="total_profit">
+              <div class="total_profit">
                 <div class="total_title">Resulting Amount</div>
                 <div id="resulting_amount" class="total_earning white">$0</div>
             </div>
@@ -69,67 +96,109 @@
         <article>
             <nav class="nav_table_content">
                 <h2>Table of Contents</h2>
-                    <li><a href="#section1">How to use</a></li>
-                    <li><a href="#section2">What is compound interest?</a></li>
-                    <li><a href="#section3">Compound interest formula</a></li>
-                    <li><a href="#section4">Rule of 4%</a></li>
-                    <li><a href="#section5">Where to use</a></li>
+                <li><a href="#section1">How to use</a></li>
+                <li><a href="#section2">What is compound interest?</a></li>
+                <li><a href="#section3">Compound interest formula</a></li>
+                <li><a href="#section4">Rule of 4%</a></li>
+                <li><a href="#section5">Where to use</a></li>
             </nav>
             <section id="section1" class="how_to">
                 <h2>How to use</h2>
-                    <p>The Compound Interest Calculator helps you determine the future value of an investment based on the initial principal, the number of periods, and the rate of return. Follow the steps below to use the calculator:</p>
-                    <ul class="how_to_order">
-                        <li><span class="bold">Initial Value ($)</span> : Enter the initial amount of money you are investing. For example, if you are starting with $100,000, input 100000 in this field.</li>
-                        <li><span class="bold">Number of Times (Period)</span> : Enter the number of periods for which the investment will grow. For instance, if you plan to invest for 5 years, input 5 in this field.</li>
-                        <li><span class="bold">Rate of Return (%)</span> : Input the annual rate of return as a percentage. For example, if you expect a 5% return per year, input 5 in this field.</li>
-                        <li><span class="bold">Calculate</span> : Click the green Calculate button to compute the compound interest. The calculator will process the inputs and display the results.</li>
-                        <li><span class="bold">Result ($)</span> : The Result field will show the final amount of your investment after the specified number of periods and the given rate of return. This value is automatically updated when you click Calculate.</li>
-                    </ul>
+                <p>The Compound Interest Calculator helps you determine the future value of an investment based on the
+                    initial principal, the number of periods, and the rate of return. Follow the steps below to use the
+                    calculator:</p>
+                <ul class="how_to_order">
+                    <li><span class="bold">Initial Value ($)</span> : Enter the initial amount of money you are
+                        investing. For example, if you are starting with $100,000, input 100000 in this field.</li>
+                    <li><span class="bold">Number of Times (Period)</span> : Enter the number of periods for which the
+                        investment will grow. For instance, if you plan to invest for 5 years, input 5 in this field.
+                    </li>
+                    <li><span class="bold">Rate of Return (%)</span> : Input the annual rate of return as a percentage.
+                        For example, if you expect a 5% return per year, input 5 in this field.</li>
+                    <li><span class="bold">Calculate</span> : Click the green Calculate button to compute the compound
+                        interest. The calculator will process the inputs and display the results.</li>
+                    <li><span class="bold">Result ($)</span> : The Result field will show the final amount of your
+                        investment after the specified number of periods and the given rate of return. This value is
+                        automatically updated when you click Calculate.</li>
+                </ul>
             </section>
             <section id="section2" class="what_is">
                 <h2>What is compound interest?</h2>
-                <p>Compound interest is the interest on a loan or deposit that is calculated based on both the initial principal and the accumulated interest from previous periods. Essentially, it means earning “interest on interest,” which can significantly increase the amount of interest earned or paid over time. This is a fundamental concept in finance and investing.</p>
-                <p>Compound interest is a powerful tool in finance, helping investors grow their wealth over time and affecting how much borrowers pay on loans. Understanding how it works is essential for making informed financial decisions.</p>
+                <p>Compound interest is the interest on a loan or deposit that is calculated based on both the initial
+                    principal and the accumulated interest from previous periods. Essentially, it means earning
+                    “interest on interest,” which can significantly increase the amount of interest earned or paid over
+                    time. This is a fundamental concept in finance and investing.</p>
+                <p>Compound interest is a powerful tool in finance, helping investors grow their wealth over time and
+                    affecting how much borrowers pay on loans. Understanding how it works is essential for making
+                    informed financial decisions.</p>
             </section>
             <section id="section3" class="formula">
                 <h2>Compound interest formula</h2>
-                <p>The compound interest formula is used to calculate the amount of interest earned on an investment or paid on a loan when interest is compounded over multiple periods. The formula considers the initial principal, the interest rate, the number of times interest is compounded per period, and the total number of periods.</p>
+                <p>The compound interest formula is used to calculate the amount of interest earned on an investment or
+                    paid on a loan when interest is compounded over multiple periods. The formula considers the initial
+                    principal, the interest rate, the number of times interest is compounded per period, and the total
+                    number of periods.</p>
                 <img src="images/formula.png" alt="">
                 <div>
                     <ul class="noDot">
-                        <li><span class="bold">A</span> = the future value of the investment/loan, including interest</li>
-                        <li><span class="bold">P</span> = the principal investment/loan amount (the initial amount of money)</li>
-                        <li><span class="bold">r</span> = the annual interest rate (in decimal form, so 5% becomes 0.05)</li>
+                        <li><span class="bold">A</span> = the future value of the investment/loan, including interest
+                        </li>
+                        <li><span class="bold">P</span> = the principal investment/loan amount (the initial amount of
+                            money)</li>
+                        <li><span class="bold">r</span> = the annual interest rate (in decimal form, so 5% becomes 0.05)
+                        </li>
                         <li><span class="bold">n</span> = the number of times interest is compounded per year</li>
                         <li><span class="bold">t</span> = the number of years the money is invested or borrowed for</li>
                     </ul>
                 </div>
-                <p>Understanding the compound interest formula is crucial for making informed decisions about investments, savings, and loans, as it highlights how different variables affect the future value of money.</p>
+                <p>Understanding the compound interest formula is crucial for making informed decisions about
+                    investments, savings, and loans, as it highlights how different variables affect the future value of
+                    money.</p>
             </section>
             <section id="section4" class="rule">
                 <h2>What is rule of 4%?</h2>
-                <p>The 4% rule is a guideline used in retirement planning to estimate a sustainable withdrawal rate from a retirement portfolio. It suggests that retirees can withdraw 4% of their retirement savings in the first year of retirement and adjust that amount for inflation each subsequent year without running out of money over a 30-year retirement period.</p>
+                <p>The 4% rule is a guideline used in retirement planning to estimate a sustainable withdrawal rate from
+                    a retirement portfolio. It suggests that retirees can withdraw 4% of their retirement savings in the
+                    first year of retirement and adjust that amount for inflation each subsequent year without running
+                    out of money over a 30-year retirement period.</p>
             </section>
             <section id="section5" class="where">
                 <h2>Where to use</h2>
-                <p>The Compound Interest Calculator is a versatile financial tool that can be used in various scenarios to help you understand and maximize the growth of your investments, savings, and more. Here are some common use cases:</p>
+                <p>The Compound Interest Calculator is a versatile financial tool that can be used in various scenarios
+                    to help you understand and maximize the growth of your investments, savings, and more. Here are some
+                    common use cases:</p>
                 <div>
                     <ul class="noDot">
-                        <li><span class="bold">Investment Planning:<br></span>•	Use the calculator to estimate the future value of your investments. By inputting your initial investment amount, expected rate of return, and the investment period, you can see how much your investment will grow over time.</li>
-                        <li><span class="bold">Retirement Savings:<br></span>•	Plan for your retirement by calculating how much your current savings will be worth when you retire. This can help you determine if you are on track to meet your retirement goals or if you need to adjust your savings strategy.</li>
-                        <li><span class="bold">Loan Comparison:<br></span>•	Use the calculator to compare different loan offers. By understanding how the interest on different loans compounds, you can make informed decisions about which loan offers the best terms and lowest overall cost.</li>
-                        <li><span class="bold">Interest Rate Analysis:<br></span>•	Analyze how different interest rates affect the growth of your savings or investments. This can help you choose the best savings account, certificate of deposit (CD), or investment opportunity.</li>
-                        <li><span class="bold">Business Applications:<br></span>•	Businesses can use the calculator to project future earnings on reserve funds or investments, helping with financial planning and cash flow management.</li>
+                        <li><span class="bold">Investment Planning:<br></span>• Use the calculator to estimate the
+                            future value of your investments. By inputting your initial investment amount, expected rate
+                            of return, and the investment period, you can see how much your investment will grow over
+                            time.</li>
+                        <li><span class="bold">Retirement Savings:<br></span>• Plan for your retirement by calculating
+                            how much your current savings will be worth when you retire. This can help you determine if
+                            you are on track to meet your retirement goals or if you need to adjust your savings
+                            strategy.</li>
+                        <li><span class="bold">Loan Comparison:<br></span>• Use the calculator to compare different loan
+                            offers. By understanding how the interest on different loans compounds, you can make
+                            informed decisions about which loan offers the best terms and lowest overall cost.</li>
+                        <li><span class="bold">Interest Rate Analysis:<br></span>• Analyze how different interest rates
+                            affect the growth of your savings or investments. This can help you choose the best savings
+                            account, certificate of deposit (CD), or investment opportunity.</li>
+                        <li><span class="bold">Business Applications:<br></span>• Businesses can use the calculator to
+                            project future earnings on reserve funds or investments, helping with financial planning and
+                            cash flow management.</li>
                     </ul>
                 </div>
             </section>
         </article>
     </div>
     <footer class="footer">
-        <p><a href="mailto:haneul11072@gmail.com">&#128233; contact@gmail.com</a></p>
-        <p><a href="mailto:haneul110721@gmail.com">&#128483; Send Feedback</a></p>
-        @ 2024 Financial Calculator Company. All rights reserved.
+        <p><a href="mailto:haneul11072@gmail.com" class="footer-content">&#128233; contact@gmail.com</a></p>
+        <p><a href="mailto:haneul110721@gmail.com" class="footer-content">&#128483; Send Feedback</a></p>
+        <p class="footer-content">@ 2024 Financial Calculator Company. All rights reserved</p>
     </footer>
     <script src="JavaScript/main.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4578269349652811"
+     crossorigin="anonymous"></script>
 </body>
+
 </html>

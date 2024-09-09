@@ -27,8 +27,8 @@ btn.addEventListener('click', function() {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${i}</td>
-            <td>+${profit.toFixed(2)}</td>
-            <td>${total.toFixed(2)}</td>
+            <td>+${profit.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
+            <td>${total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
             <td>${(r * 100).toFixed(2)}%</td>
         `;
         tbody.appendChild(row);
@@ -39,3 +39,15 @@ btn.addEventListener('click', function() {
     // const A = P * Math.pow((1 + r / n), n * t);
     result.value = isNaN(total) ? 'Invalid input' : total.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }); // replace = comma every 3 digits
+
+
+// Light/Dark mode
+document.getElementById('lightMode').addEventListener('click', function () {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    
+});
+document.getElementById('darkMode').addEventListener('click', function () {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+});

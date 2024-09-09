@@ -14,6 +14,90 @@ a {
 body {
     font-family: "PT Sans", sans-serif;
 }
+
+.navbar_icons { 
+    list-style: none;
+    display: flex;
+    gap: 2%;
+}
+.navbar_icons li {
+    cursor: pointer;
+    font-size: 24px;
+}
+/* light mode */
+.light-mode {
+    background-color: #ffffff;
+    color:#000000;
+}
+.ligth-mode .nav_table_content a {
+    color: #ffffff;
+}
+.light-mode .container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.light-mode form {
+    background-color:#ffffff ;
+    color: #000000;
+}
+.light-mode th, .light-mode td {
+    background-color: #ffffff;
+    border-color: #000000;
+}
+
+/* dark mode */
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+.dark-mode .nav_table_content a {
+    color: #ffffff;
+}
+.dark-mode .container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.dark-mode form {
+    background-color:#000000 ;
+    color: #ffffff;
+}
+.dark-mode th, .dark-mode td {
+    background-color: #000000;
+    color: #ffffff;
+}
+.dark-mode .footer-content {
+    color: #ffffff
+}
+
+/* input 필드와 버튼 스타일 */
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.light-mode input {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ccc;
+}
+
+.dark-mode input {
+    background-color: #555555;
+    color: #ffffff;
+    border-color: #888888;
+}
+
+
+
 h2 {
     font-size: 2em;
     font-weight: bold;

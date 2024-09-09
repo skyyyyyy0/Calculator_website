@@ -1,0 +1,276 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.navbar_icons { 
+    list-style: none;
+    display: flex;
+    gap: 2%;
+}
+.navbar_icons li {
+    cursor: pointer;
+    font-size: 24px;
+}
+/* light mode */
+.light-mode {
+    background-color: #ffffff;
+    color:#000000;
+}
+
+
+/* dark mode */
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+.dark-mode .wrapper {
+    background-color: black;
+}
+.dark-mode .app-title {
+    color: #ffffff;
+}
+.dark-mode label {
+    color: #ffffff;
+}
+.dark-mode .footer-content {
+    color: #ffffff
+}
+.dark-mode #amount {
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: #ffffff;
+    margin-bottom: 2em;
+    padding: 0.5em;
+}
+
+/* input 필드와 버튼 스타일 */
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.light-mode input {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ccc;
+}
+
+.dark-mode input {
+    background-color: #555555;
+    color: #ffffff;
+    border-color: #888888;
+}
+
+
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+p {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+}
+span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+
+}
+li {
+    font-size: 1.2em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/* Website header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #04AA6D;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 90%;
+    max-width: 25em;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 2em;
+    border-radius: 0.8em;
+
+}
+.app-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.app-icon {
+    width: 9.375em;
+}
+.app-title {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+label {
+    display: block;
+    font-weight: 600;
+}
+input#amount {
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: #7a789d;
+    margin-bottom: 2em;
+    padding: 0.5em;
+}
+input#amount:focus {
+    color: #04AA6D;
+    border-color: #04AA6D;
+}
+.dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+select {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.2;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    background-image:url("/images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 20px 20px;
+    background-color: #04AA6D;
+    color:#ffffff;
+}
+select option { 
+    background-color: #ffffff;
+    color: #02002c;
+}
+button {
+    font-size: 1em;
+    width: 100%;
+    background-color: #04AA6D;
+    padding: 1em 0 ;
+    margin-top: 2em;
+    border-radius: 0.3em;
+    color: #ffffff;
+    font-weight: 600;
+}
+#result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    color: white;
+    background-color: #04AA6D;
+    padding: 0.8em 0;
+}
+
+.footer {
+    text-align: center;
+}
+/* Laptop & tablet width (1024px ~ 1279px)*/ 
+@media all and (min-width:1024px) and (max-width:1279px) { 
+  } 
+  
+  /* Tablet width (768px ~ 1023px)*/ 
+  @media all and (min-width:768px) and (max-width:1023px) { 
+    
+  } 
+  
+  /* Mobile width & tablet height (480px ~ 767px)*/ 
+  @media all and (min-width:480px) and (max-width:767px) {
+    
+  } 
+  
+  /* Mobile height ( ~ 479px)*/ 
+  @media all and (max-width:479px) {
+    
+  }
