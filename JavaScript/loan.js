@@ -60,3 +60,4 @@ document.getElementById('darkMode').addEventListener('click', function () {
     document.body.classList.remove('light-mode');
     document.body.classList.add('dark-mode');
 });
+applyCurrentMode();

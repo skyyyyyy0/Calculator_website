@@ -50,15 +50,21 @@ body {
 .dark-mode {
     background-color: #000000;
     color: #ffffff;
+    
+}
+.dark-mode .main_main {
+    border: 1px solid gray;
 }
 .dark-mode .nav_table_content a {
     color: #ffffff;
+
 }
 .dark-mode .container {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
 }
 .dark-mode form {
     background-color:#000000 ;
@@ -168,15 +174,35 @@ li {
 
 /* Main content */
 .main {
-    border: 1px solid #263343;
-    width:60%;
-    height: auto;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2% 5% 2% 5%;
-    border-radius: 10px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
+
+.main_main {
+    width: 70%;
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.ad-space {
+    width: 30%;
+    position: sticky;
+    top: 20px; /* 상단에서 20px 떨어진 위치에 고정 */
+    height: calc(100vh - 40px); /* 뷰포트 높이에서 상하 여백을 뺀 높이 */
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 생성 */
+    margin: 2% 2%;
+    /* 광고 요소 중앙 정렬을 위한 flexbox 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .main_title {
     font-weight: bold;
     text-align: center;
@@ -322,3 +348,11 @@ article {
         flex-direction: column; /* To vertically align a divs */
     }
   }
+
+  /* 다크 모드에서의 광고 스타일 */
+.dark-mode .ad-space,
+.dark-mode .mobile-ad {
+    background-color: #333;
+    color: #fff;
+    
+}
